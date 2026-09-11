@@ -1,0 +1,26 @@
+[
+  {
+    "id": "outfoxing",
+    "title": "Outfoxing",
+    "artist": "MDN Audio Lab",
+    "cover": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=720&q=85",
+    "src": "https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3",
+    "format": "MP3"
+  },
+  {
+    "id": "example-ogg",
+    "title": "Example Signal",
+    "artist": "Open Audio Archive",
+    "cover": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=720&q=85",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg",
+    "format": "OGG"
+  },
+  {
+    "id": "viper-ogg",
+    "title": "Viper Pulse",
+    "artist": "MDN Audio Lab",
+    "cover": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=720&q=85",
+    "src": "https://mdn.github.io/webaudio-examples/audio-param/viper.ogg",
+    "format": "OGG"
+  }
+]
