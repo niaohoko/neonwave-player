@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1024" />
+    <title>NEONWAVE · 音乐播放器</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="NEONWAVE 首页">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NEON<span>WAVE</span></span>
+      </a>
+      <div class="connection-status" id="connectionStatus" aria-live="polite">
+        <span class="status-dot"></span>音乐已就绪
+      </div>
+    </header>
+
+    <main id="top" class="player-layout">
+      <section class="player-card" aria-labelledby="trackTitle">
+        <div class="now-playing-label"><span></span> NOW PLAYING</div>
+        <div class="record-stage">
+          <div class="record" id="record" aria-hidden="true">
+            <div class="record-groove"></div>
+            <div class="record-groove groove-two"></div>
+            <img id="coverArt" src="" alt="当前歌曲封面" />
+          </div>
+          <div class="sound-bars" id="soundBars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="track-meta">
+          <h1 id="trackTitle">正在加载音乐…</h1>
+          <p id="trackArtist">NEONWAVE</p>
+        </div>
+
+        <div class="timeline-wrap">
+          <input id="progress" class="range progress-range" type="range" min="0" max="100" value="0" step="0.1" aria-label="播放进度" />
+          <div class="time-row"><time id="currentTime">0:00</time><time id="duration">0:00</time></div>
+        </div>
+
+        <div class="controls" aria-label="播放控制">
+          <button class="icon-button" id="modeButton" type="button" aria-label="当前模式：列表循环" title="列表循环">↻</button>
+          <button class="icon-button transport" id="previousButton" type="button" aria-label="上一首" title="上一首">↞</button>
+          <button class="play-button" id="playButton" type="button" aria-label="播放" title="播放"><span id="playIcon">▶</span></button>
+          <button class="icon-button transport" id="nextButton" type="button" aria-label="下一首" title="下一首">↠</button>
+          <button class="icon-button" id="muteButton" type="button" aria-label="静音" title="静音">◖</button>
+        </div>
+
+        <div class="volume-control">
+          <span aria-hidden="true">◔</span>
+          <input id="volume" class="range" type="range" min="0" max="1" value="0.8" step="0.01" aria-label="音量" />
+          <span id="volumeValue">80%</span>
+        </div>
+      </section>
+
+      <aside class="playlist-card" aria-labelledby="playlistTitle">
+        <div class="playlist-heading">
+          <div><p>YOUR QUEUE</p><h2 id="playlistTitle">播放列表</h2></div>
+          <span id="trackCount" class="track-count">0 首</span>
+        </div>
+        <ol id="playlist" class="playlist" aria-label="歌曲列表"></ol>
+      </aside>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <audio id="audio" preload="metadata"></audio>
+    <footer>NEONWAVE PLAYER <span>•</span> HTML5 AUDIO ENGINE</footer>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+# Local scratch files and editor/system metadata
+work/
+outputs/
+.DS_Store
+Thumbs.db
+
+# Dependency and build folders
+node_modules/
+dist/
